@@ -302,7 +302,7 @@ impl<C> ProxyConnector<C> {
                 ))
             }).collect::<Result<Vec<_>, io::Error>>()?;
 
-            roots.add_server_trust_anchors(certs.into_iter());
+            roots.add_trust_anchors(certs.into_iter());
         }
 
         #[cfg(feature = "rustls-webpki")]
