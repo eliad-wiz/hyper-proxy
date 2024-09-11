@@ -13,33 +13,33 @@ edition = "2021"
 rust-version = "1.70.0"
 
 [dependencies]
-tokio = { version = "1.35", features = ["io-std", "io-util"] }
-hyper = { version = "1.0", features = ["client"] }
-hyper-util = { version = "0.1.2", features = ["client", "client-legacy", "tokio"] }
+tokio = { version = "1.40", features = ["io-std", "io-util"] }
+hyper = { version = "1.4", features = ["client"] }
+hyper-util = { version = "0.1.8", features = ["client", "client-legacy", "tokio"] }
 
-tower-service = "0.3.2"
-http = "1.0"
+tower-service = "0.3.3"
+http = "1.1"
 futures-util = { version = "0.3.30", default-features = false }
-bytes = "1.5"
-pin-project-lite = "0.2.13"
+bytes = "1.7"
+pin-project-lite = "0.2.14"
 hyper-tls = { version = "0.6.0", optional = true }
 tokio-native-tls = { version = "0.3.1", optional = true }
-native-tls = { version = "0.2.11", optional = true }
-openssl = { version = "0.10.62", optional = true }
+native-tls = { version = "0.2.12", optional = true }
+openssl = { version = "0.10.66", optional = true }
 tokio-openssl = { version = "0.6.4", optional = true }
 tokio-rustls = { version = "0.26.0", optional = true, default-features = false, features = ["logging", "tls12"] }
-hyper-rustls = { version = "0.27.1", optional = true }
+hyper-rustls = { version = "0.27.3", optional = true }
 
 webpki = { version = "0.22", optional = true }
-rustls-native-certs = { version = "0.7.0", optional = true }
-webpki-roots = { version = "0.26.0", optional = true }
+rustls-native-certs = { version = "0.8.0", optional = true }
+webpki-roots = { version = "0.26.5", optional = true }
 headers = "0.4"
 
 [dev-dependencies]
-tokio = { version = "1.35", features = ["full"] }
-hyper = { version = "1.0", features = ["client", "http1"] }
-hyper-util = { version = "0.1.2", features = ["client", "client-legacy", "http1", "tokio"] }
-http-body-util = "0.1.0"
+tokio = { version = "1.40", features = ["full"] }
+hyper = { version = "1.4", features = ["client", "http1"] }
+hyper-util = { version = "0.1.8", features = ["client", "client-legacy", "http1", "tokio"] }
+http-body-util = "0.1.2"
 futures = "0.3.30"
 
 [features]
